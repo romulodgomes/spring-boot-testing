@@ -1,5 +1,6 @@
 package br.com.brothertec.springboot.repository;
 
+import br.com.brothertec.springboot.integration.AbstractContainerBaseTest;
 import br.com.brothertec.springboot.model.Employee;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -14,7 +15,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
-public class EmployeeRepositoryIntegrationTests {
+public class EmployeeRepositoryIntegrationTests extends AbstractContainerBaseTest {
 
     @Autowired
     private EmployeeRepository employeeRepository;
